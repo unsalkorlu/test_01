@@ -1,11 +1,31 @@
 package com.ukorlu.utility;
 
-public class ConversionDto {
+import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * xml conversion annotations https://howtodoinjava.com/jaxb/jaxb-annotations/
+ * 
+ * @author unsalk
+ *
+ */
+@XmlRootElement(name = "ConversionDto")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class ConversionDto implements Serializable {
+
+	private static final long serialVersionUID = -1128560438958857539L;
+
+	@XmlElement(name = "field1")
 	private String field1;
 
+	@XmlElement(name = "field2")
 	private String field2;
 
+	@XmlElement(name = "field3")
 	private String field3;
 
 	public String getField1() {
