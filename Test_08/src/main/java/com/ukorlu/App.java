@@ -12,7 +12,7 @@ public class App {
 	private static final LogManager logManager = LogManager.getLogManager();
 	static {
 		try {
-			logManager.readConfiguration(new FileInputStream("./log.properties"));
+			logManager.readConfiguration(new FileInputStream("./resources/log.properties"));
 		} catch (IOException exception) {
 			logger.log(Level.SEVERE, "Error in loading configuration", exception);
 		}
